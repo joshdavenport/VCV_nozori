@@ -119,7 +119,7 @@ struct warningText_48 : BASE {
 	}
 	void drawLight(const widget::Widget::DrawArgs& args) override {
 		nvgBeginPath(args.vg);
-		if (this->color.a != 1.) { // invert since we don't want this warning to be displayed on the module selection menu
+		if (this->color.a == 0.) { // invert since we don't want this warning to be displayed on the module selection menu
 		    nvgRect(args.vg, 0, 0, this->box.size.x, this->box.size.y);
 		    nvgFillColor(args.vg, nvgRGBA(0x00,0x00,0x00,0x80));
 			nvgFill(args.vg);
@@ -140,7 +140,7 @@ struct warningText_96 : BASE {
 	}
 	void drawLight(const widget::Widget::DrawArgs& args) override {
 		nvgBeginPath(args.vg);
-		if (this->color.a != 1.) { // invert since we don't want this warning to be displayed on the module selection menu
+		if (this->color.a == 0.) { // invert since we don't want this warning to be displayed on the module selection menu
 		    nvgRect(args.vg, 0, 0, this->box.size.x, this->box.size.y);
 		    nvgFillColor(args.vg, nvgRGBA(0x00,0x00,0x00,0x80));
 			nvgFill(args.vg);
